@@ -1,0 +1,6 @@
+#!/bin/bash
+exec 2>&1
+LOGDIR=<%= @options[:log_dir] %>
+mkdir -p $LOGDIR
+exec /command/s6-log -t n30 E500 - +fatal: e - +^STAT =$LOGDIR f s10000000 S15000000 !"gzip -nq9" $LOGDIR
+# exec /command/s6-log -bt n20 s1000000 $LOGDIR

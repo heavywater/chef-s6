@@ -1,0 +1,10 @@
+# s6-svscan
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+oom never
+respawn
+# console log
+
+# This ends up in /command due to slashpackage convention. Fun!
+exec /command/s6-svscanboot

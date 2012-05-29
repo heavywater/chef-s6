@@ -1,4 +1,12 @@
-chef-s6
-=======
+Description
+===========
 
-skaarnet's small supervision suite cookbook and definition for chef, runit_service compatible (mostly)
+Requirements
+============
+
+Attributes
+==========
+
+Usage
+=====
+
